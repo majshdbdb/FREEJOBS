@@ -233,4 +233,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else if (result.error.includes('Email not confirmed')) {
                     errorMessage = 'Email belum diverifikasi. Silakan cek email Anda';
                 }
-               
+                showMessage('❌ ' + errorMessage, 'error', messageDiv);
+            }
+            
+            // Reset button
+            submitBtn.textContent = 'Login';
+            submitBtn.disabled = false;
+        });
+    }
+});
+
+// Utility function to show messages
+function showMessage(message, type, container) {
+    container.innerHTML = `<div class="message ${type}">${message}</div>`;
+    
+    if (type === 'success') {
+        setTimeout(() => {
+            container.innerHTML = '';
+        }, 5000);
+    }
+}
