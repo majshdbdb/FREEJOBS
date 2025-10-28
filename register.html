@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar - WorkHub</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.38.0"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-logo">💼 WorkHub</div>
+            <div class="auth-subtitle">Buat akun baru Anda</div>
+            
+            <div id="message"></div>
+            
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="userType">Saya ingin bergabung sebagai:</label>
+                    <select id="userType" required>
+                        <option value="">Pilih peran</option>
+                        <option value="freelancer">Freelancer (Mencari Kerja)</option>
+                        <option value="client">Client (Mempekerjakan)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="fullName">Nama Lengkap:</label>
+                    <input type="text" id="fullName" placeholder="Nama lengkap Anda" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="contoh@email.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" placeholder="Minimal 6 karakter" required minlength="6">
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirmPassword">Konfirmasi Password:</label>
+                    <input type="password" id="confirmPassword" placeholder="Ulangi password" required minlength="6">
+                </div>
+                
+                <div id="freelancerFields" class="hidden">
+                    <div class="form-group">
+                        <label for="skills">Keahlian (pisahkan dengan koma):</label>
+                        <input type="text" id="skills" placeholder="Contoh: Web Development, Graphic Design, SEO">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="hourlyRate">Rate Per Jam (Rp):</label>
+                        <input type="number" id="hourlyRate" placeholder="50000">
+                    </div>
+                </div>
+                
+                <div id="clientFields" class="hidden">
+                    <div class="form-group">
+                        <label for="company">Nama Perusahaan (opsional):</label>
+                        <input type="text" id="company" placeholder="Nama perusahaan Anda">
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn-auth" id="submitBtn">Daftar Sekarang</button>
+            </form>
+            
+            <div class="auth-link">
+                Sudah punya akun? <a href="login.html">Login di sini</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const userTypeSelect = document.getElementById('userType');
+            const freelancerFields = document.getElementById('freelancerFields');
+            const clientFields = document.getElementById('clientFields');
+            
+            userTypeSelect.addEventListener('change', function() {
+                freelancerFields.classList.add('hidden');
+                clientFields.classList.add('hidden');
+                
+                if (this.value === 'freelancer') {
+                    freelancerFields.classList.remove('hidden');
+                } else if (this.value === 'client') {
+                    clientFields.classList.remove('hidden');
+                }
+            });
+            
+            // Check URL parameters for role
+            const urlParams = new URLSearchParams(window.location.search);
+            const role = urlParams.get('role');
+            if (role && (role === 'freelancer' || role === 'client')) {
+                userTypeSelect.value = role;
+                userTypeSelect.dispatchEvent(new Event('change'));
+            }
+        });
+    </script>
+</body>
+</html>
