@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkHub - Platform Freelance Indonesia</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.38.0"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>💼 WorkHub</h2>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Fitur</a>
+                <a href="#how-it-works">Cara Kerja</a>
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="register.html" class="register-btn">Daftar Gratis</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Temukan Kerja Freelance Terbaik atau Rekrut Talent Berkualitas</h1>
+                <p>Platform freelance gratis untuk semua orang. Mulai dari Rp 50.000 hingga jutaan rupiah.</p>
+                <div class="hero-buttons">
+                    <a href="register.html?role=freelancer" class="btn-primary">Mulai Kerja</a>
+                    <a href="register.html?role=client" class="btn-secondary">Rekrut Talent</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>500+</h3>
+                        <p>Freelancer Aktif</p>
+                    </div>
+                    <div class="stat">
+                        <h3>1,200+</h3>
+                        <p>Proyek Selesai</p>
+                    </div>
+                    <div class="stat">
+                        <h3>98%</h3>
+                        <p>Kepuasan Klien</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-card card-1">
+                    <div class="card-header">
+                        <span class="online-dot"></span>
+                        <strong>Web Developer</strong>
+                    </div>
+                    <p>Butuh website company profile</p>
+                    <span class="budget">Rp 2.5jt - 5jt</span>
+                </div>
+                <div class="floating-card card-2">
+                    <div class="card-header">
+                        <span class="online-dot"></span>
+                        <strong>Graphic Designer</strong>
+                    </div>
+                    <p>Desain logo startup</p>
+                    <span class="budget">Rp 500rb - 1.5jt</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Mengapa Pilih WorkHub?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>100% Gratis</h3>
+                    <p>Tidak ada biaya komisi atau subscription. Anda bayar hanya untuk pekerjaan yang diselesaikan.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Sistem Escrow Aman</h3>
+                    <p>Pembayaran ditahan sampai pekerjaan selesai dan disetujui oleh kedua belah pihak.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Proses Cepat</h3>
+                    <p>Temukan freelancer atau proyek dalam hitungan menit, bukan hari.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌟</div>
+                    <h3>Reputasi Terverifikasi</h3>
+                    <p>Sistem rating dan review yang transparan untuk semua pengguna.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2>Bagaimana Cara Kerjanya?</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Daftar & Buat Profil</h3>
+                    <p>Buat akun sebagai freelancer atau client dalam 2 menit</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Posting atau Lamar</h3>
+                    <p>Client posting pekerjaan, freelancer kirim proposal</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Mulai Bekerja</h3>
+                    <p>Pilih freelancer terbaik dan mulai proyek dengan sistem escrow</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Selesaikan & Bayar</h3>
+                    <p>Setelah pekerjaan selesai, release pembayaran dan beri review</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>💼 WorkHub</h3>
+                    <p>Platform freelance terpercaya untuk talenta Indonesia.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Perusahaan</h4>
+                    <a href="#">Tentang Kami</a>
+                    <a href="#">Karir</a>
+                    <a href="#">Blog</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Dukungan</h4>
+                    <a href="#">Bantuan</a>
+                    <a href="#">Kontak</a>
+                    <a href="#">FAQ</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <a href="#">Syarat & Ketentuan</a>
+                    <a href="#">Kebijakan Privasi</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 WorkHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script>
+        // Check if user is already logged in
+        async function checkAuth() {
+            const { data: { user } } = await window.supabase.auth.getUser();
+            if (user) {
+                window.location.href = 'dashboard.html';
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', checkAuth);
+    </script>
+</body>
+</html>
